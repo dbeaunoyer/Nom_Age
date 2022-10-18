@@ -55,7 +55,6 @@ namespace premier_programme
 
             }
 
-            Console.WriteLine("Vous faites" + taille + " m de hauteur");
 
         }
 
@@ -119,7 +118,7 @@ namespace premier_programme
 
 
             // AFFICHE LES RESULTATS
-            AfficherInfosPersonne(nom1, age1, 1.75);
+            AfficherInfosPersonne(nom1, age1);
             AfficherInfosPersonne(nom2, age2);
 
 
