@@ -4,6 +4,61 @@ namespace premier_programme
 {
     class Program
     {
+        static void AfficherInfosPersonne(string nom, int age )
+
+        {
+
+            // AFFICHE LES RESULTATS
+            Console.WriteLine();          // LIGNE VIDE
+            Console.WriteLine("Bonjour, vous vous appelez " + nom + ", vous avez " + age + " ans");
+            Console.WriteLine("Dans un an, vous aurez " + (age + 1) + " ans");
+
+            if (age == 18)
+            {
+                Console.WriteLine("Vous êtes tout juste majeur... ");
+            }
+
+            else if (age == 17)
+            {
+                Console.WriteLine("Vous serez bientot majeur");
+            }
+
+            else if ((age >= 12) && (age < 18))
+            {
+                Console.WriteLine("vous etes un adolescent");
+            }
+
+            else if ((age == 1) || (age == 2))
+            {
+                Console.WriteLine("vous etes un bebe");
+            }
+
+            else if (age >= 60)
+
+            {
+                Console.WriteLine("Vous etes senior");
+            }
+
+            else if (age >= 18)
+            {
+                Console.WriteLine("Vous êtes majeur... ");
+            }
+
+            else if (age < 10)
+            {
+                Console.WriteLine("Vous etes un enfant");
+            }
+
+            else
+            {
+                Console.WriteLine("Vous êtes mineur... ");
+
+            }
+
+            Console.WriteLine("Vous faites" + taille + " m de hauteur");
+
+        }
+
         static string DemanderNom(int numeroPersonne)
         {
             string nom = "";
@@ -61,14 +116,14 @@ namespace premier_programme
             int age1 = DemanderAge(nom1);
             int age2 = DemanderAge(nom2);
 
-            // AFFICHE LES RESULTATS
-            Console.WriteLine();
-            Console.WriteLine("Bonjour, vous vous appelez " + nom1 + ", vous avez " + age1 + " ans");
-            Console.WriteLine("bientôt vous aurez " + (age1 + 1) + " ans");
 
-            Console.WriteLine();
-            Console.WriteLine("Bonjour, vous vous appelez " + nom2 + ", vous avez " + age2 + " ans");
-            Console.WriteLine("bientôt vous aurez " + (age2 + 1) + " ans");
+
+            // AFFICHE LES RESULTATS
+            AfficherInfosPersonne(nom1, age1, 1.75);
+            AfficherInfosPersonne(nom2, age2);
+
+
+           
         }
     }
 }
